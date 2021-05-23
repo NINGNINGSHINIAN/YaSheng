@@ -1,4 +1,3 @@
-
 class BinarySearchTree:
     def __init__(self):
         self.root = None  # 为什么？
@@ -113,33 +112,6 @@ class BinarySearchTree:
                 else:
                     currentNode.replaceNodeData(currentNode.rightChild.key, currentNode.rightChild.payload,
                                                 currentNode.rightChild.leftChild, currentNode.rightChild.rightChild)
-
-    def inorder(self):
-        self._inorder(self.root)
-
-    def _inorder(self, tree):
-        if tree:
-            self._inorder(tree.leftChild)
-            print(tree.key)
-            self._inorder(tree.rightChild)
-
-    def postorder(self):
-        self._postorder(self.root)
-
-    def _postorder(self, tree):
-        if tree:
-            self._postorder(tree.rightChild)
-            self._postorder(tree.leftChild)
-            print(tree.key)
-
-    def preorder(self):
-        self._preorder(self, self.root)
-
-    def _preorder(self, tree):
-        if tree:
-            print(tree.key)
-            self._preorder(tree.leftChild)
-            self._preorder(tree.rightChild)
 
 
 class TreeNode:
